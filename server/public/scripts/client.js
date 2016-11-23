@@ -7,10 +7,20 @@ app.config(['$routeProvider', function($routeProvider) {
       controller: 'HomeController',
       controllerAs: 'home'
     })
-    .when('/potato' ,{
-      templateUrl: '/views/templates/potato.html',
-      controller: 'PotatoController',
-      controllerAs: 'potato'
+    .when('/philby' ,{
+      templateUrl: '/views/templates/philby.html',
+      controller: 'PhilbyController',
+      controllerAs: 'philby'
+    })
+    .when('/lawrence' ,{
+      templateUrl: '/views/templates/lawrence.html',
+      controller: 'LawrenceController',
+      controllerAs: 'lawrence'
+    })
+    .when('/marshall' ,{
+      templateUrl: '/views/templates/marshall.html',
+      controller: 'MarshallController',
+      controllerAs: 'marshall'
     })
     .otherwise({
       redirectTo: 'home'
@@ -22,12 +32,22 @@ app.controller('HomeController', function() {
   console.log('home controller running');
   var self = this;
   self.message = "Home controller is the best!";
-
 });
 
-app.controller('PotatoController', function() {
-  console.log('potato controller running');
+app.controller('PhilbyController', function() {
+  console.log('philby controller running');
   var self = this;
-  self.message = "Potato controller is the best!";
+  this.message = "Philby controller is running.";
+});
 
+app.controller('LawrenceController', function() {
+  console.log('lawrence controller running');
+  var self = this;
+  this.message = "Lawrence controller is running.";
+});
+
+app.controller('MarshallController', function() {
+  console.log('marshall controller running');
+  var self = this;
+  this.message = "Marshall controller is running.";
 });
